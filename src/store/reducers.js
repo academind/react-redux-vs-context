@@ -7,8 +7,7 @@ const initialState = {
     { id: 'p3', title: 'Used plastic bottle', price: 0.99 },
     { id: 'p4', title: 'Half-dried plant', price: 2.99 }
   ],
-  cart: [],
-  cartSum: 0
+  cart: []
 };
 
 const shopReducer = (state = initialState, action) => {
