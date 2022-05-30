@@ -12,7 +12,7 @@ class App extends Component {
       <GlobalState>
         <BrowserRouter>
           <Routes>
-            <Route path="/" component={ProductsPage}>
+            <Route path="/">
               <Route index element={<ProductsPage />} />
               <Route path="cart" element={<CartPage />} />
             </Route>
