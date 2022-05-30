@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import ProductsPage from './pages/Products';
 import CartPage from './pages/Cart';
@@ -9,10 +9,12 @@ class App extends Component {
   render() {
     return (
       <BrowserRouter>
-        <Switch>
-          <Route path="/" component={ProductsPage} exact />
-          <Route path="/cart" component={CartPage} exact />
-        </Switch>
+        <Routes>
+          <Route path="/">
+            <Route index element={<ProductsPage />} />
+            <Route path="cart" element={<CartPage />} />
+          </Route>
+        </Routes>
       </BrowserRouter>
     );
   }
